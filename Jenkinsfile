@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('Build & Publish') {
+    stage('Build') {
       steps {
-        sh './mvnw clean deploy'
+        sh './mvnw clean verify'
       }
     }
   }
