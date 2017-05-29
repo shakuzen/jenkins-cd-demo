@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('Initialize') {
+    stage('Build & Publish') {
       steps {
-        echo 'Pipeline runs'
+        sh './mvnw clean deploy'
       }
     }
   }
